@@ -1,25 +1,28 @@
 import React, { Component } from "react";
 import XucXac from "./XucXac";
 import ThongTinGame from "./ThongTinGame";
+import "./GameXucXac.css";
 class GameXucXac extends Component {
   render() {
     return (
-      <div>
-        <h2>game xuc xac</h2>
-        <div className="row">
-          <div className="col-5">
-            <button>Tài</button>
+      <div className="main container-fluid py-5">
+        <h2 className="text-center text-uppercase fs-1 fw-bold font-bold mb-5">game xuc xac</h2>
+        <div className="container">
+          <div className="row mb-5">
+            <div className="col-3 d-flex justify-content-center align-items-center align-items-start">
+              <button className="btn btn-primary btn-rounder p-5 fs-2">Tài</button>
+            </div>
+            <div className="col-6">
+              <XucXac />
+            </div>
+            <div className="col-3 d-flex justify-content-center align-items-center align-items-start">
+              <button className="btn btn-primary btn-rounder p-5 fs-2">Xỉu</button>
+            </div>
           </div>
-          <div className="col-2">
-            <XucXac />
+          <div className="row">
+            <ThongTinGame />
+            <button className="btn btn-success btn-rounder py-3 px-5 fs-2 mt-3">Play game</button>
           </div>
-          <div className="col-5">
-            <button>Xỉu</button>
-          </div>
-        </div>
-        <div class="row">
-          <ThongTinGame />
-          <button>Play game</button>
         </div>
       </div>
     );
