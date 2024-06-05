@@ -4,13 +4,13 @@ class ThongTinGame extends Component {
   render() {
     return (
       <div>
-        <p>
+        <p className="text-center text-uppercase fs-2 fw-bold font-bold">
           Bạn Chọn: <span>1</span>
         </p>
-        <p>
+        <p className="text-center text-uppercase fs-2 fw-bold font-bold">
           Bạn Thắng: <span>1</span>
         </p>
-        <p>
+        <p className="text-center text-uppercase fs-2 fw-bold font-bold">
           Số Lần Chơi: <span>1</span>
         </p>
       </div>
