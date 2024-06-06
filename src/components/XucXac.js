@@ -1,14 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { connect } from "react-redux";
 class XucXac extends Component {
+  renderXucXac = () => {
+    return this.props.mangXucXac.map((xucXac, index) => {
+      return <img key={index} src={xucXac.img} alt="" />;
+    });
+  };
   render() {
-    return (
-      <div className='d-flex justify-content-between'>
-        <img src="./assets/imgs/1.png" alt="" />
-        <img src="./assets/imgs/2.png" alt="" />
-        <img src="./assets/imgs/3.png" alt="" />
-      </div>
-    );
+    return <div className="d-flex justify-content-between">{this.renderXucXac()}</div>;
   }
 }
 
-export default XucXac;
+const mapStateToProps = (state) => {
+  return {
+    mangXucXac: state.GameReduce.mangXucXac,
+  };
+};
+
+export default connect(mapStateToProps)(XucXac);
