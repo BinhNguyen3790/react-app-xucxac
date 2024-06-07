@@ -11,11 +11,12 @@ const stateDefault = {
 
 const GameReduce = (state = stateDefault, action) => {
   switch (action.type) {
-    // case "":
-    //   {
-
-    //   }
-    //   break;
+    case "DAT_CUOC":
+      {
+        state.taiXiu = action.taiXiu;
+        return { ...state };
+      }
+      break;
     default:
       return { ...state };
   }
