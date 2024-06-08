@@ -36,7 +36,14 @@ class GameXucXac extends Component {
           </div>
           <div className="row">
             <ThongTinGame />
-            <button className="btn btn-success btn-rounder py-3 px-5 fs-2 mt-3">Play game</button>
+            <button
+              onClick={() => {
+                this.props.playGame();
+              }}
+              className="btn btn-success btn-rounder py-3 px-5 fs-2 mt-3"
+            >
+              Play game
+            </button>
           </div>
         </div>
       </div>
@@ -49,9 +56,14 @@ const mapDispatchToProps = (dispatch) => {
     datCuoc: (taiXiu) => {
       let action = {
         type: "DAT_CUOC",
-        taiXiu
-      }
+        taiXiu,
+      };
       dispatch(action);
+    },
+    playGame: () => {
+      dispatch({
+        type: "PLAY_GAME"
+      })
     },
   };
 };
