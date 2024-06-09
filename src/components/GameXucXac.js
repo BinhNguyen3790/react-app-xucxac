@@ -10,25 +10,25 @@ class GameXucXac extends Component {
         <h2 className="text-center text-uppercase fs-1 fw-bold font-bold mb-5">game xuc xac</h2>
         <div className="container">
           <div className="row mb-5">
-            <div className="col-3 d-flex justify-content-center align-items-center align-items-start">
+            <div className="col-2 d-flex justify-content-center align-items-center align-items-start">
               <button
                 onClick={() => {
                   this.props.datCuoc(true);
                 }}
-                className="btn btn-primary btn-rounder p-5 fs-2"
+                className="btn btn-primary btn-rounder p-2 fs-2"
               >
                 Tài
               </button>
             </div>
-            <div className="col-6">
+            <div className="col-8">
               <XucXac />
             </div>
-            <div className="col-3 d-flex justify-content-center align-items-center align-items-start">
+            <div className="col-2 d-flex justify-content-center align-items-center align-items-start">
               <button
                 onClick={() => {
                   this.props.datCuoc(false);
                 }}
-                className="btn btn-primary btn-rounder p-5 fs-2"
+                className="btn btn-primary btn-rounder p-2 fs-2"
               >
                 Xỉu
               </button>
@@ -62,8 +62,8 @@ const mapDispatchToProps = (dispatch) => {
     },
     playGame: () => {
       dispatch({
-        type: "PLAY_GAME"
-      })
+        type: "PLAY_GAME",
+      });
     },
   };
 };

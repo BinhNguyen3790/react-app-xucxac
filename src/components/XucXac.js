@@ -3,7 +3,11 @@ import { connect } from "react-redux";
 class XucXac extends Component {
   renderXucXac = () => {
     return this.props.mangXucXac.map((xucXac, index) => {
-      return <img key={index} src={xucXac.img} alt="" />;
+      return (
+        <div key={index} style={{ width: "33.3%" }}>
+          <img src={xucXac.img} alt="" style={{ width: "100%" }} />
+        </div>
+      );
     });
   };
   render() {
